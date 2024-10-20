@@ -1,0 +1,67 @@
+---
+---
+<header>
+	<nav>
+		<div class="logo">
+			<a href="/">Science News Magazine</a>
+		</div>
+		<div class="nav-links">
+			<a href="/latest">Latest Research</a>
+			<a href="/topics">Topics</a>
+			<a href="/analysis">In-Depth Analysis</a>
+			<a href="/about">About</a>
+		</div>
+		<div class="search-subscribe">
+			<input type="search" placeholder="Search..." aria-label="Search">
+			<button class="subscribe-btn">Subscribe</button>
+		</div>
+	</nav>
+</header>
+
+<style>
+	header {
+		background-color: var(--color-primary);
+		color: var(--color-text-light);
+		padding: 1rem;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+	}
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.logo a {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--color-text-light);
+		text-decoration: none;
+	}
+	.nav-links a {
+		color: var(--color-text-light);
+		text-decoration: none;
+		margin-left: 1rem;
+	}
+	.search-subscribe {
+		display: flex;
+		align-items: center;
+	}
+	input[type="search"] {
+		padding: 0.5rem;
+		border: none;
+		border-radius: 4px;
+		margin-right: 1rem;
+	}
+	.subscribe-btn {
+		background-color: var(--color-accent);
+		color: var(--color-text-light);
+		border: none;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+</style>

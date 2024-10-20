@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedArticle from '../components/FeaturedArticle.astro';
+import ArticleGrid from '../components/ArticleGrid.astro';
+
+const featuredArticle = {
+	title: "Breakthrough in Quantum Computing: A New Era of Processing Power",
+	excerpt: "Scientists have achieved a major milestone in quantum computing, paving the way for unprecedented computational capabilities.",
+	author: "Dr. Jane Smith",
+	date: "June 15, 2023",
+	readingTime: "5 min read",
+	image: "https://via.placeholder.com/800x400"
+};
+
+const latestArticles = [
+	{
+		title: "The Role of Gut Microbiome in Mental Health",
+		excerpt: "New research reveals the intricate connection between gut bacteria and mental well-being.",
+		image: "https://via.placeholder.com/400x300",
+		category: "Life Sciences"
+	},
+	{
+		title: "Dark Matter: The Hunt for the Universe's Missing Mass",
+		excerpt: "Astrophysicists propose a new method to detect dark matter, bringing us closer to solving cosmic mysteries.",
+		image: "https://via.placeholder.com/400x300",
+		category: "Physical Sciences"
+	},
+	{
+		title: "AI in Archaeology: Unearthing Ancient Secrets",
+		excerpt: "How artificial intelligence is revolutionizing archaeological discoveries and our understanding of human history.",
+		image: "https://via.placeholder.com/400x300",
+		category: "Technology"
+	}
+];
+---
+
+<Layout title="Science News Magazine - Latest Research and Discoveries">
+	<main>
+		<FeaturedArticle {...featuredArticle} />
+		
+		<h2>Latest Research</h2>
+		<ArticleGrid articles={latestArticles} />
+		
+		<!-- Add more sections as needed -->
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--color-primary);
+	}
+</style>

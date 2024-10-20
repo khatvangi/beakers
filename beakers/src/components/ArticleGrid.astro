@@ -1,0 +1,35 @@
+---
+import ArticleCard from './ArticleCard.astro';
+
+interface Article {
+	title: string;
+	excerpt: string;
+	image: string;
+	category: string;
+}
+
+interface Props {
+	articles: Article[];
+}
+
+const { articles } = Astro.props;
+---
+<section class="article-grid">
+	{articles.map((article) => (
+		<ArticleCard
+			title={article.title}
+			excerpt={article.excerpt}
+			image={article.image}
+			category={article.category}
+		/>
+	))}
+</section>
+
+<style>
+	.article-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+</style>
